@@ -42,10 +42,10 @@ pipeline{
     }
     stage('CodeQuality-SAST'){
       steps{
-        sh mvn clean verify sonar:sonar \
+        sh 'mvn clean verify sonar:sonar \
   -Dsonar.projectKey=mypipeline \
   -Dsonar.host.url=http://devopsdemo.eastus.cloudapp.azure.com:9000 \
-  -Dsonar.login=3fe499802026f9cc8213d0fb98f9bc6c7dc4c17b
+  -Dsonar.login=3fe499802026f9cc8213d0fb98f9bc6c7dc4c17b'
       }
     }
   }    
